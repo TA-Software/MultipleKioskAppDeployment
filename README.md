@@ -1,7 +1,7 @@
 # Deploying Kiosk application
 
 ## Deploying for one kiosk in one PC
-1. Download or build the latest RELEASE build of the application
+1. Download a copy of this repository
 2. Copy the file to the target PC
 3. Run `Install.ps1` file on the target PC
 4. Setup the application to run on startup by setting up Assigned Access https://learn.microsoft.com/en-us/windows/configuration/kiosk-single-app#local
