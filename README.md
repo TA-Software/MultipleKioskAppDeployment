@@ -10,7 +10,7 @@
 1. Upgrade the PC to Enterprise or Education edition. This is required to use the ShellLauncherV2
 2. Turn on the Shell Launcher optional component
 3. Download the scripts and files in this folder to your PC
-4. Download SysInternals tools, run "psexec.exe -i -s powershell.exe" from elevated command prompt
+4. Download SysInternals tools, run `psexec.exe -i -s powershell.exe` from elevated command prompt
 5. Open the `PayrollShellLauncherConfiguration.xml` file
 6. For each user accounts that is going to be used to host the kiosk application, there should be one Profile and Config element in the XML file.
     1. Copy and paste the existing `Profile` element that has Payroll as its Shell, and make sure that each `Profile` has a unique Id attribute.
