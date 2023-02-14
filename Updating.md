@@ -8,7 +8,8 @@ Use the following steps to update the Payroll application on a kiosk.
 4. Enable assigned access for the account
 
 ## Multiple Kiosks
-1. Login to the PC as an administrator
-2. Follow Step 7 and 9 in [README.md](README.md) file
-3. Install the update by logging in into all user accounts that requires the update and run the `msixbundle` file
-4. Follow Step 8 in [README.md](README.md) file
+1. Logout from all accounts on the PC
+2. Login to the PC as a local administrator
+3. Download a copy of the application package and this repository
+4. Replace the `Add-AppDevPackage.ps1` inside the package and replace it with a copy from this repository
+5. Run `Install.ps1` from the package. 
