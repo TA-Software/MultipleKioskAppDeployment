@@ -1,10 +1,9 @@
 # Deploying Kiosk application
 
 ## Deploying for one kiosk in one PC
-1. Download a copy of this repository
-2. Copy the file to the target PC
-3. Run `Install.ps1` file on the target PC
-4. Setup the application to run on startup by setting up Assigned Access https://learn.microsoft.com/en-us/windows/configuration/kiosk-single-app#local
+1. Download a copy of the application package.
+2. Run `Install.ps1` file on the target PC
+3. Setup the application to run on startup by setting up Assigned Access https://learn.microsoft.com/en-us/windows/configuration/kiosk-single-app#local
 
 ## Deploying for multiple kiosks in one PC
 1. Upgrade the PC to Enterprise or Education edition. This is required to use the ShellLauncherV2
