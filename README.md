@@ -1,14 +1,14 @@
 # Deploying Kiosk application
 
 ## Deploying for one kiosk in one PC
-1. Download a copy of the application package.
-2. Run `Install.ps1` file on the target PC
-3. Setup the application to run on startup by setting up Assigned Access https://learn.microsoft.com/en-us/windows/configuration/kiosk-single-app#local
+1. Install the app on the PC https://ta-software.github.io/kioskupdate/
+2. Setup the application to run on startup by setting up Assigned Access https://learn.microsoft.com/en-us/windows/configuration/kiosk-single-app#local
 
 ## Deploying for multiple kiosks in one PC
 1. Upgrade the PC to Enterprise or Education edition. This is required to use the ShellLauncherV2
-2. Turn on the Shell Launcher optional component
-3. Download a copy of this repository (Code > Download Zip)
+2. Prepare and install the application on each of the user accounts
+3. Turn on the Shell Launcher optional component
+4. Download a copy of this repository (Code > Download Zip)
 5. Download SysInternals tools, run `psexec.exe -i -s powershell.exe` from elevated command prompt
 6. Open the `PayrollShellLauncherConfiguration.xml` file
 7. For each user accounts that is going to be used to host the kiosk application, there should be one Profile and Config element in the XML file.
@@ -18,17 +18,15 @@
 ```
 PS C:\Users\test> . .\ShellLauncherBridgeWmiHelpers.ps1
 ```
-8. After importing, run the command Set-ShellLauncherBridgeWMI with FilePath pointing to a shell launcher config xml
+9. After importing, run the command Set-ShellLauncherBridgeWMI with FilePath pointing to a shell launcher config xml
 ```
 PS C:\Users\test> Set-ShellLauncherBridgeWmi -FilePath .\PayrollShellLauncherConfiguration.xml
 ```
-9. To remove the kiosk configuration from the PC, run the other command Clear-ShellLauncherBridgeWMI
+10. To remove the kiosk configuration from the PC, run the other command Clear-ShellLauncherBridgeWMI
 
 ```
 PS C:\Users\test> Clear-ShellLauncherBridgeWmi
 ```
-10. On the kiosk app installation package, replace the `Add-AppDevPackage.ps1` file with the one in this folder. This will make sure that the kiosk app is installed for all users.
-11. Run `Install.ps1` file on the target PC
 
 ## Extra reading
 1. Assigned Access: https://docs.microsoft.com/en-us/windows/configuration/kiosk-single-app#local
